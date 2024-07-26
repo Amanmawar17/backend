@@ -1,0 +1,18 @@
+table:
+  name: users
+  schema: public
+object_relationships:
+  - name: Balance
+    using:
+      foreign_key_constraint_on:
+        column: id
+        table:
+          name: Balance
+          schema: public
+  - name: account
+    using:
+      foreign_key_constraint_on:
+        column: id
+        table:
+          name: accounts
+          schema: public
